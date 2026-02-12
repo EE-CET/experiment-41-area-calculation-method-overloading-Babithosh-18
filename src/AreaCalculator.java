@@ -10,19 +10,21 @@ public class AreaCalculator {
     // TODO: Define calculateArea(double base, double height) -> returns area of triangle
 
 
-    double calculateArea(float radius) {
-        return Math.PI * radius * radius;
+
+
+    double calculateArea(float r) {
+        return 3.14 * r * r;
     }
 
-    double calculateArea(float length, float breadth) {
-        return length * breadth;
+    double calculateArea(float l, float b) {
+        return l * b;
     }
 
-    double calculateArea(double base, double height) {
-        return 0.5 * base * height;
+    double calculateArea(double b, double h) {
+        return 0.5 * b * h;
     }
 
-
+   
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         // TODO: Read input for Circle (radius)
@@ -32,7 +34,7 @@ public class AreaCalculator {
         // TODO: Call methods and print results formatted to 2 decimal places
         // Hint: Use System.out.printf("%.2f\n", area);
 
-	 AreaCalculator obj = new AreaCalculator();
+	AreaCalculator a = new AreaCalculator();
 
         float radius = sc.nextFloat();
         float length = sc.nextFloat();
@@ -40,14 +42,11 @@ public class AreaCalculator {
         double base = sc.nextDouble();
         double height = sc.nextDouble();
 
-        double circleArea = obj.calculateArea(radius);
-        double rectangleArea = obj.calculateArea(length, breadth);
-        double triangleArea = obj.calculateArea(base, height);
+        System.out.printf("%.2f\n", a.calculateArea(radius));
+        System.out.printf("%.2f\n", a.calculateArea(length, breadth));
+        System.out.printf("%.2f\n", a.calculateArea(base, height));
 
-        System.out.printf("Area of Circle: %.2f\n", circleArea);
-        System.out.printf("Area of Rectangle: %.2f\n", rectangleArea);
-        System.out.printf("Area of Triangle: %.2f\n", triangleArea);
 
-        sc.close();
+	        sc.close();
     }
 }
