@@ -12,8 +12,8 @@ public class AreaCalculator {
 
 
 
-    double calculateArea(float r) {
-        return 3.14 * r * r;
+     double calculateArea(float r) {
+        return Math.PI * r * r;   
     }
 
     double calculateArea(float l, float b) {
@@ -23,7 +23,6 @@ public class AreaCalculator {
     double calculateArea(double b, double h) {
         return 0.5 * b * h;
     }
-
    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
